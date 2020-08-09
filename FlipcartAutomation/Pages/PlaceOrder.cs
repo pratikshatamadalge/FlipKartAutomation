@@ -18,11 +18,19 @@ namespace FlipcartAutomation.Pages
 
         [FindsBy(How = How.XPath, Using = "//div[@id='container']//div//div//div//div//div//div//div//div//form//button")]
         IWebElement placeOrder;
+
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Order Summary')]")]
+        IWebElement orderSummary;
        
         public void PlaceOrderPage()
         {
-            placeOrder.Click();
             Thread.Sleep(3000);
+            placeOrder.Click();
+        }
+
+        public string validatePage()
+        {
+            return orderSummary.Text;
         }
     }
 }

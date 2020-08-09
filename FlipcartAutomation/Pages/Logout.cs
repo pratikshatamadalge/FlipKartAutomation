@@ -27,7 +27,6 @@ namespace FlipcartAutomation.Pages
 
         [FindsBy(How = How.XPath, Using = "//li[10]//a[1]")]
         IWebElement logout;
-        //body//div[@id='container']//div//div//div//div//li[10]//a[1]
         
         public void LogoutPage()
         {

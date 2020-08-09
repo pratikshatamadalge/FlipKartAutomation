@@ -41,11 +41,18 @@ namespace FlipcartAutomation.Pages
         [FindsBy(How = How.XPath, Using = "//a[1]//img[1]")]
         IWebElement logo;
 
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Order Summary')]")]
+        IWebElement orderSummary;
 
         public void AddressPage()
         {
+            Thread.Sleep(3000);
             logo.Click();
-            Thread.Sleep(4000);
+        }
+
+        public string validatePage()
+        {
+            return orderSummary.Text;
         }
     }
 }

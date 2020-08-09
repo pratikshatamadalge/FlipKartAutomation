@@ -4,6 +4,7 @@ using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace FlipcartAutomation.Pages
 {
@@ -26,12 +27,21 @@ namespace FlipcartAutomation.Pages
         [FindsBy(How = How.XPath, Using = "//html//body//div//div//div//div//div//div//div//form//div//button//span[contains(text(),'Login')]")]
         IWebElement loginBtn;
 
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'My Account')]")]
+        IWebElement myAccount;
+
         public void LoginPage()
         {
             JsonReader json = new JsonReader();
             mobileNo.SendKeys(json.mobileNo);
             password.SendKeys(json.password);
             loginBtn.Click();
+        }
+
+        public string validatePage()
+        {
+            Thread.Sleep(5000);
+           return myAccount.Text;
         }
     }
 }

@@ -22,8 +22,11 @@ namespace FlipcartAutomation.Pages
         public void AddToCartPage()
         {
             addToCart.Click();
-            Thread.Sleep(4000);
-            
+        }
+
+        public string validatePage()
+        {
+            return addToCart.Text;
         }
     }
 }

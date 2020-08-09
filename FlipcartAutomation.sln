@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlipcartAutomation", "FlipcartAutomation\FlipcartAutomation.csproj", "{BAB3CE38-22C4-4BD8-8C59-4E2CA15BE04E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlipkartAutomation", "FlipcartAutomation\FlipkartAutomation.csproj", "{BAB3CE38-22C4-4BD8-8C59-4E2CA15BE04E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTPHandling", "F:\VS\OTPHandling\OTPHandling.csproj", "{DFFA1159-CAFE-4A35-8C8C-C3DCB56E8DCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OTPHandling", "F:\VS\OTPHandling\OTPHandling.csproj", "{DFFA1159-CAFE-4A35-8C8C-C3DCB56E8DCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
