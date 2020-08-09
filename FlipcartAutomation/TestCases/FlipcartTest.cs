@@ -1,11 +1,19 @@
 using FlipcartAutomation.Base;
 using NUnit.Framework;
 using FlipcartAutomation.Pages;
+using System.Text;
+using System;
+using OpenQA.Selenium;
+using System.Threading;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.MarkupUtils;
+using NUnit.Framework.Interfaces;
 
 namespace FlipcartAutomation
 {
     public class Tests:BaseClass
     {
+        
 
         [Test, Order(0)]
         public void LoginTest()

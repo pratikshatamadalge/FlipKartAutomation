@@ -12,6 +12,8 @@ namespace FlipcartAutomation.DataProvider
         public string mobileNo = "";
         public string password = "";
         public string search = "";
+        public string email = "";
+        public string password1 = "";
         public string json = "";
 
         public JsonReader()
@@ -26,6 +28,8 @@ namespace FlipcartAutomation.DataProvider
             mobileNo = array["mobileNo"];
             password = array["password"];
             search = array["Iphone"];
+            email = array["email"];
+            password1 =array["password1"];
         }
     }
 }
