@@ -39,10 +39,10 @@ namespace FlipkartAutomation.Utilities
                 MailMessage mail = new MailMessage();
                 string fromEmail = json.email;
                 string password = json.password1;
-                string ToEmail = "pratikshatamadalge21@gmail.com";
+                string toEmail = "pratikshatamadalge21@gmail.com";
                 mail.From = new MailAddress(fromEmail);
                 mail.Subject = "Please check the attached report";
-                mail.To.Add(ToEmail);
+                mail.To.Add(toEmail);
                 mail.Priority = MailPriority.High;
                 mail.IsBodyHtml = true;
                 mail.Attachments.Add(new Attachment(@"C:\Users\rohit\source\repos\FlipcartAutomation\FlipcartAutomation\ExtentReport\index.html"));

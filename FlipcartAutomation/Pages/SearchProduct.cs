@@ -1,12 +1,13 @@
-﻿using OpenQA.Selenium;
-using SeleniumExtras.PageObjects;
-using System.Threading;
-
-namespace FlipcartAutomation.Pages
+﻿namespace FlipcartAutomation.Pages
 {
+    using System.Threading;
+    using OpenQA.Selenium;
+    using SeleniumExtras.PageObjects;
+
     class SearchProduct
     {
         public IWebDriver driver;
+
         public SearchProduct(IWebDriver driver)
         {
             this.driver = driver;

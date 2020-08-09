@@ -1,24 +1,26 @@
-﻿using AventStack.ExtentReports;
-using AventStack.ExtentReports.MarkupUtils;
-using FlipkartAutomation.Utilities;
-using NUnit.Framework;
-using NUnit.Framework.Interfaces;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using FlipkartAutomation.ExtentReport;
-
+﻿// <copyright file="BaseClass.cs" company="Bridgelabz">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 namespace FlipcartAutomation.Base
 {
+    using System;
+    using System.Threading;
+    using AventStack.ExtentReports;
+    using AventStack.ExtentReports.MarkupUtils;
+    using FlipkartAutomation.ExtentReport;
+    using FlipkartAutomation.Utilities;
+    using NUnit.Framework;
+    using NUnit.Framework.Interfaces;
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+
     public class BaseClass
     {
         public IWebDriver driver;
         public const string path = "C:\\Users\\rohit\\source\\repos\\FlipcartAutomation\\FlipcartAutomation\\Screenshot";
         public static ExtentReports extent = ReportManager.GetInstance();
         public static ExtentTest test;
+
         [OneTimeSetUp]
         public void Initialization()
         {
@@ -57,6 +59,7 @@ namespace FlipcartAutomation.Base
             {
                 throw e;
             }
+
             Thread.Sleep(5000);
             extent.Flush();
         }

@@ -1,15 +1,17 @@
-﻿using OpenQA.Selenium;
-using SeleniumExtras.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+﻿// <copyright file="PlaceOrder.cs" company="Bridgelabz">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace FlipcartAutomation.Pages
 {
+    using System.Threading;
+    using OpenQA.Selenium;
+    using SeleniumExtras.PageObjects;
+
     class PlaceOrder
     {
         public IWebDriver driver;
+
         public PlaceOrder(IWebDriver driver)
         {
             this.driver = driver;
@@ -21,7 +23,7 @@ namespace FlipcartAutomation.Pages
 
         [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Order Summary')]")]
         IWebElement orderSummary;
-       
+
         public void PlaceOrderPage()
         {
             Thread.Sleep(3000);

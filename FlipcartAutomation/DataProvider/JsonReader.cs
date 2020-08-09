@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+﻿// <copyright file="JsonReader.cs" company="Bridgelabz">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace FlipcartAutomation.DataProvider
 {
+    using System.IO;
+    using Newtonsoft.Json;
+
     class JsonReader
     {
 

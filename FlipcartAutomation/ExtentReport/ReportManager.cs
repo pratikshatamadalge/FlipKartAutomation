@@ -1,20 +1,17 @@
-﻿using AventStack.ExtentReports;
-using AventStack.ExtentReports.Reporter;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FlipkartAutomation.ExtentReport
+﻿namespace FlipkartAutomation.ExtentReport
 {
+    using AventStack.ExtentReports;
+    using AventStack.ExtentReports.Reporter;
+
     class ReportManager
     {
         private static ExtentReports extent;
         private static ExtentHtmlReporter htmlReporter;
 
         /// <summary>
-        /// To get instance of extent report
+        /// To get instance of extent report.
         /// </summary>
-        /// <returns> extent class object</returns>
+        /// <returns> extent class object.</returns>
         public static ExtentReports GetInstance()
         {
             if (extent == null)
@@ -26,6 +23,7 @@ namespace FlipkartAutomation.ExtentReport
                 extent.AddSystemInfo("OS", "Windows 10");
                 extent.AddSystemInfo("Browser", "Chrome");
             }
+
             return extent;
         }
     }

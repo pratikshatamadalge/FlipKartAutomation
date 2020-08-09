@@ -1,17 +1,13 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-
-namespace FlipcartAutomation.Pages
+﻿namespace FlipcartAutomation.Pages
 {
+    using System.Threading;
+    using OpenQA.Selenium;
+    using SeleniumExtras.PageObjects;
+
     public class Logout
     {
         public IWebDriver driver;
+
         public Logout(IWebDriver driver)
         {
             this.driver = driver;
@@ -20,14 +16,13 @@ namespace FlipcartAutomation.Pages
 
         [FindsBy(How = How.XPath, Using = "//div[contains(text(),'My Account')]")]
         IWebElement myAccount;
-        
 
         [FindsBy(How = How.XPath, Using = "//body/div[@id='container']/div/div/div/div/div[3]/div[1]/div[1]/div[1]")]
         IWebElement MyAccountDropdown;
 
         [FindsBy(How = How.XPath, Using = "//li[10]//a[1]")]
         IWebElement logout;
-        
+
         public void LogoutPage()
         {
             Thread.Sleep(3000);

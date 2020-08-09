@@ -1,15 +1,17 @@
-﻿using OpenQA.Selenium;
-using SeleniumExtras.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+﻿// <copyright file="Address.cs" company="Bridgelabz">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace FlipcartAutomation.Pages
 {
+    using System.Threading;
+    using OpenQA.Selenium;
+    using SeleniumExtras.PageObjects;
+
     class Address
     {
         public IWebDriver driver;
+
         public Address(IWebDriver driver)
         {
             this.driver = driver;

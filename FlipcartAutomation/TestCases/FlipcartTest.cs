@@ -1,20 +1,15 @@
-using FlipcartAutomation.Base;
-using NUnit.Framework;
-using FlipcartAutomation.Pages;
-using System.Text;
-using System;
-using OpenQA.Selenium;
-using System.Threading;
-using AventStack.ExtentReports;
-using AventStack.ExtentReports.MarkupUtils;
-using NUnit.Framework.Interfaces;
+// <copyright file="FlipcartTest.cs" company="Bridgelabz">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace FlipcartAutomation
 {
+    using FlipcartAutomation.Base;
+    using FlipcartAutomation.Pages;
+    using NUnit.Framework;
+
     public class Tests:BaseClass
     {
-        
-
         [Test, Order(0)]
         public void LoginTest()
         {
@@ -48,7 +43,7 @@ namespace FlipcartAutomation
             PlaceOrder order = new PlaceOrder(driver);
             order.PlaceOrderPage();
             string actualResult = order.validatePage();
-            Assert.AreEqual("ORDER SUMMARY",actualResult);
+            Assert.AreEqual("ORDER SUMMARY", actualResult);
         }
 
         [Test,Order(4)]
