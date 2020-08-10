@@ -21,11 +21,14 @@ namespace FlipcartAutomation.Base
         public const string path = "C:\\Users\\rohit\\source\\repos\\FlipcartAutomation\\FlipcartAutomation\\Screenshot";
         public static ExtentReports extent = ReportManager.GetInstance();
         public static ExtentTest test;
+        private static readonly log4net.ILog log =log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
 
         [OneTimeSetUp]
         public void Initialization()
         {
             ChromeOptions options = new ChromeOptions();
+            log.Info("Chromeoptions instance created and added arguments to it");
             options.AddArguments("--incognito", "--start-maximized", "--disable-notifications");
             driver = new ChromeDriver(options);
             driver.Url = "https://www.flipkart.com/";
@@ -69,6 +72,7 @@ namespace FlipcartAutomation.Base
             }
             catch (Exception e)
             {
+                log.Error("error: "+e);
                 if (e.Message == "An exception occurred during a Ping request.")
                 {
                     Console.Out.WriteLine(e.StackTrace);
