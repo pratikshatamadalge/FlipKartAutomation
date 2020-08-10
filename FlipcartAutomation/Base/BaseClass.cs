@@ -4,6 +4,7 @@
 namespace FlipcartAutomation.Base
 {
     using System;
+    using System.Net.NetworkInformation;
     using System.Threading;
     using AventStack.ExtentReports;
     using AventStack.ExtentReports.MarkupUtils;
@@ -41,6 +42,17 @@ namespace FlipcartAutomation.Base
         {
             try
             {
+                Ping myPing = new Ping();
+                String host = "flipkart.com";
+                byte[] buffer = new byte[32];
+                int timeout = 1000;
+                PingOptions pingOptions = new PingOptions();
+                PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
+                if(reply!=null)
+                {
+                    Console.Out.WriteLine("Internet connection established");
+                }
+
                 test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
                 if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
                 {
@@ -57,7 +69,16 @@ namespace FlipcartAutomation.Base
             }
             catch (Exception e)
             {
-                throw e;
+                if (e.Message == "An exception occurred during a Ping request.")
+                {
+                    Console.Out.WriteLine(e.StackTrace);
+                    Console.Out.WriteLine(e.Message + " Internet connection not established");
+                }
+                else
+                {
+                    Console.Out.WriteLine(e.StackTrace);
+                    Console.Out.WriteLine(e.Message);
+                }
             }
 
             Thread.Sleep(5000);
