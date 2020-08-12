@@ -41,7 +41,7 @@ namespace FlipcartAutomation.Pages
 
         public string validatePage()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(4000);
             return myAccount.Text;
         }
     }

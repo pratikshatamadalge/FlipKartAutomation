@@ -17,11 +17,12 @@
         [FindsBy(How = How.XPath, Using = "//input[@name='q']")]
         IWebElement searchBox;
 
-        [FindsBy(How = How.XPath, Using = "//body/div[@id='container']/div/div/div/div/div[2]/div[2]/div[1]/div[1]/div[1]")]
+        [FindsBy(How = How.XPath, Using = "//body/div/div/div/div/div/div[2]/div[2]/div[1]/div[1]/div[1]")]
         IWebElement product;
 
         [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Sort By')]")]
         IWebElement sortBy;
+        
         public void SearchProductPage()
         {
             searchBox.SendKeys("Iphone"+ Keys.Enter);
