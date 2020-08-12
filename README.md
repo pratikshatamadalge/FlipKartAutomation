@@ -1,7 +1,7 @@
 Project Title:
 FlipKart Website Automation
 
-Description
+Description:
 The project is to automate FlipKart.com which is e-commerce application
 
 Prerequisites:
@@ -19,7 +19,7 @@ Data Driven
 Design Pattern
 Page Object Model
 
-Packages
+Packages:
 DotNetSeleniumExtras.PageObjects- For Page object Model
 ExtentReports- To generate Test Reports
 Newtonsoft.Json-To access data from json file
@@ -30,9 +30,8 @@ Selenium.WebDriver.ChromeDriver- Driver for Google Chrome
 DNSClient- In this project it is uesd to get Host name
 Log4Net-Logging Test steps to log file
 
-Test scenario covered
+Test scenario covered:
 #First- Normal scenario of buying product
-
 Login to FlipKart application
 Navigates to Home page
 Search product
