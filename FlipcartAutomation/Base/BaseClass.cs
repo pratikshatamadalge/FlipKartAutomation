@@ -29,7 +29,7 @@ namespace FlipcartAutomation.Base
         {
             ChromeOptions options = new ChromeOptions();
             log.Info("Chromeoptions instance created and added arguments to it");
-            options.AddArguments("--incognito", "--start-maximized", "--disable-notifications");
+            options.AddArguments("--incognito", "--start-maximized", "--disable-notifications", "--ignore-certificate-errors");
             driver = new ChromeDriver(options);
             driver.Url = "https://www.flipkart.com/";
         }
