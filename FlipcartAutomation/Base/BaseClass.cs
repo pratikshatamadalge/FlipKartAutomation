@@ -23,7 +23,9 @@ namespace FlipcartAutomation.Base
         public static ExtentTest test;
         private static readonly log4net.ILog log =log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-
+        /// <summary>
+        /// Driver Initialization.
+        /// </summary>
         [OneTimeSetUp]
         public void Initialization()
         {
@@ -34,18 +36,18 @@ namespace FlipcartAutomation.Base
             driver.Url = "https://www.flipkart.com/";
         }
 
+        /// <summary>
+        /// Test setup method.
+        /// </summary>
         [SetUp]
         public void SetUp()
         {
             Utility.InternetConnection();
         }
 
-        [OneTimeTearDown]
-        public void TearDown()
-        {
-            driver.Quit();
-        }
-
+        /// <summary>
+        /// Method to add report ,screenshot features to each test.
+        /// </summary>
         [TearDown]
         public void close()
         {
@@ -65,17 +67,27 @@ namespace FlipcartAutomation.Base
                     test.Log(Status.Pass, "Test Sucessful");
                     test.Pass(MarkupHelper.CreateLabel(TestContext.CurrentContext.Test.Name, ExtentColor.Green));
                 }
+
+                Utility.SendEmail();
             }
             catch (Exception e)
             {
                 log.Error("error: "+e);
-              
                     Console.Out.WriteLine(e.StackTrace);
                     Console.Out.WriteLine(e.Message);
             }
 
             Thread.Sleep(5000);
             extent.Flush();
+        }
+
+        /// <summary>
+        /// Driver quite method.
+        /// </summary>
+        [OneTimeTearDown]
+        public void TearDown()
+        {
+            driver.Quit();
         }
     }
 }
